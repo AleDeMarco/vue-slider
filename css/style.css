@@ -1,0 +1,120 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Gochi Hand', cursive;
+}
+
+body{
+  background-image: url(https://wallpapercave.com/wp/wp5347669.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+h1{
+  font-size: 80px;
+  letter-spacing: 5px;
+  text-align: center;
+  padding-top: 40px;
+  color: blue;
+}
+
+.highlight{
+  position:relative;
+}
+
+.highlight:before{
+  content:"";
+  z-index:-1;
+  left:-0.5em;
+  top:-0.1em;
+  border-width:10px;
+  border-style:solid;
+  border-color:red;
+  position:absolute;
+  border-right-color:transparent;
+  width:100%;
+  height:1em;
+  transform:rotate(2deg);
+  opacity:0.7;
+  border-radius:50%;
+  padding:0.1em 0.25em;
+}
+
+.highlight:after{
+  content:"";
+  z-index:-1;
+  left:-0.5em;
+  top:0.1em;
+  padding:0.1em 0.25em;
+  border-width:10px;
+  border-style:solid;
+  border-color:red;
+  border-left-color:transparent;
+  border-top-color:transparent;
+  position:absolute;
+  width:100%;
+  height:1em;
+  transform:rotate(-1deg);
+  opacity:0.7;
+  border-radius:50%;
+}
+
+.prev,
+.next{
+  color: red;
+  font-size: 80px;
+  position: absolute;
+  top: 60%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.prev{
+  left: 25%;
+}
+
+.next{
+  right: 25%;
+}
+
+.img{
+  height: 606px;
+  width: 341px;
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, -50%);
+  border: 10px solid blue;
+}
+
+img{
+  width: 100%;
+  height: 100%;
+}
+
+.nav{
+  width: 70px;
+  height: 300px;
+  border: 5px solid blue;
+  border-radius: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: red;
+  position: absolute;
+  top: 60%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+}
+
+.nav i{
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.active{
+  color: blue !important;
+}
